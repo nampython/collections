@@ -171,10 +171,24 @@ public class DoublyLinkedList<E> {
      * @param o
      * @return
      */
-    public boolean remove(Object o) {
+    public E remove(int index) {
+        checkElementIndex(index);
         return false;
     }
 
+    private void checkElementIndex(int index) {
+        if (index < 0 || index > this.size - 1) {
+            throw new IndexOutOfBoundsException(outOfBoundsMsg(index));
+        }
+    }
+
+    public Node<E> node(int index) {
+        Node<E> node = this.first;
+
+    }
+    private String  outOfBoundsMsg(int index) {
+        return "Index: "+index+", Size: "+size;
+    }
     /**
      * Returns the number of element in this list
      * @return: the number of elements in this list
