@@ -1,6 +1,6 @@
 package org.example.util;
 
-public class LinkedList<E> {
+public class LinkedList<E> implements Queue<E>{
 
     private Node<E> first;
     private Node<E> last;
@@ -26,6 +26,31 @@ public class LinkedList<E> {
         }
         current.next = node;
         this.last = current.next;
+    }
+
+    @Override
+    public boolean offer(E e) {
+        return false;
+    }
+
+    @Override
+    public E remove() {
+        return null;
+    }
+
+    @Override
+    public E poll() {
+        return null;
+    }
+
+    @Override
+    public E element() {
+        return null;
+    }
+
+    @Override
+    public E peek() {
+        return null;
     }
 
 

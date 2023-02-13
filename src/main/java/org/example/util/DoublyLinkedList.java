@@ -168,12 +168,14 @@ public class DoublyLinkedList<E> {
     //TODO
     /**
      *
-     * @param o
+     * @param
      * @return
      */
     public E remove(int index) {
         checkElementIndex(index);
-        return false;
+        Node<E> node = this.node(index);
+        return null;
+//        return false;
     }
 
     private void checkElementIndex(int index) {
@@ -184,10 +186,10 @@ public class DoublyLinkedList<E> {
 
     public Node<E> node(int index) {
         Node<E> node = this.first;
-
+        return null;
     }
     private String  outOfBoundsMsg(int index) {
-        return "Index: "+index+", Size: "+size;
+        return "Index: " + index + ", Size: "+size;
     }
     /**
      * Returns the number of element in this list
